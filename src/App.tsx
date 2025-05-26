@@ -1,8 +1,7 @@
-import './App.css'
-import SyncTestComponent from "./components/SyncTestComponent.tsx";
+import './App.css';
+
 
 function App() {
-    // 웹소켓 대신 BroadcastChannel 이름을 전달
     return (
         <>
             <SyncTestComponent
