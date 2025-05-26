@@ -1,4 +1,5 @@
 import './App.css';
+import SyncTestComponent from "./components/SyncTestComponent.tsx";
 
 
 function App() {
