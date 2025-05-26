@@ -1,5 +1,5 @@
 import {useCallback, useState} from 'react';
-import {useWebSocket} from "../hooks/useWebSocket.ts";
+import {useMockWebSocket} from "../hooks/useMockWebSocket.ts";
 
 // 아이템 상태를 위한 인터페이스 정의
 interface ItemState {
@@ -44,7 +44,7 @@ const SyncTestComponent = ({serverUrl, userId}: SyncTestComponentProps) => {
     }, []);
 
     // WebSocket 연결
-    const {readyState, sendMessage} = useWebSocket(serverUrl, handleMessage);
+    const {readyState, sendMessage} = useMockWebSocket(serverUrl, handleMessage);
 
     // 사용자가 체크박스 클릭했을 때 호출
     const onCheck = (id: string, checked: boolean) => {

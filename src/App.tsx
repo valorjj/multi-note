@@ -1,15 +1,14 @@
 import './App.css'
 import SyncTestComponent from "./components/SyncTestComponent.tsx";
 
-const serverUrl = 'ws://localhost:8080/ws'; // Spring Boot WebSocket 엔드포인트
-const userId = `user-${Math.floor(Math.random() * 1000)}`; // 예시 랜덤 ID
-
-
 function App() {
-
+    // 웹소켓 대신 BroadcastChannel 이름을 전달
     return (
         <>
-            <SyncTestComponent serverUrl={serverUrl} userId={userId}/>
+            <SyncTestComponent
+                serverUrl="sync-test-channel"
+                userId={`user-${Math.floor(Math.random() * 1000)}`}
+            />
         </>
     )
 }
